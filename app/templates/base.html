@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }} - Bankinator</title>
+    {% else %}
+        <title>Welcome to Bankinator</title>
+    {% endif %}
+</head>
+<body>
+<div>Homepage: <a href="index.html">Home</a></div>
+<hr>
+{% block content %}{% endblock %}
+</body>
+</html>
