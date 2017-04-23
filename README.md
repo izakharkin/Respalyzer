@@ -1,5 +1,11 @@
-# Respalizer
-Python/Flask web app that makes predictions of the mark of your response
+# Respalizer (c)
+Russian sentiments analyzer.  
+Predicts tonality of response - mark from 1 to 5.
+
+Supported topics:
+- Bank services responses
+- (TODO) Films
+- (TODO) Tweets
 
 WORK IN PROGRESS
-It works, but it is very raw and looks ugly (for now). Next update ~ 1 Apr
+

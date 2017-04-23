@@ -1,6 +1,6 @@
 from app import app
 from flask import request, render_template
-from app.analyze.sentiment_analyzer import Bankinator
+from app.src.sentiment_analyzer import SentimentAnalyzer
 
 
 @app.route("/act")
@@ -10,5 +10,5 @@ def predict_mark():
 
 @app.route("/predict", methods=['GET'])
 def predictor():
-    nostradamus = Bankinator()
+    nostradamus = SentimentAnalyzer()
     return "I see.. Your mark is " + str(nostradamus.predict(request.args.get('text', '')))
