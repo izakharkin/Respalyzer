@@ -20,7 +20,8 @@ def extract_response(text):
     resp_text = soup.find('div', {'itemprop': 'description'}).text.strip()
     return resp_text
 
-# end_lists_num states for the number of the last page with reponses, so you can vary it
+# end_lists_num states for the number of the last page with reponses,
+# so you can vary it
 
 start_lists_num = 1
 end_lists_num = 2000  # 11580

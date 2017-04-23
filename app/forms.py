@@ -10,5 +10,7 @@ def predict_mark():
 
 @app.route("/predict", methods=['GET'])
 def predictor():
-    nostradamus = SentimentAnalyzer()
-    return "I see.. Your mark is " + str(nostradamus.predict(request.args.get('text', '')))
+    respalizer = SentimentAnalyzer()
+    return respalizer.get_prediction_message(request.args.get('text', ''))
+
+# <dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
