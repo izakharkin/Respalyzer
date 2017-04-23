@@ -21,7 +21,7 @@ def extract_response(text):
     return resp_text
 
 start_lists_num = 1
-end_lists_num = 2000 #11580
+end_lists_num = 2000  # 11580
 
 with open('responses_dataset.csv', 'w') as csvfile:
     fieldnames = ['mark', 'description']

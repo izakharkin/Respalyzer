@@ -1,9 +1,9 @@
 from app import app
 from flask import request, render_template
-from app.analyze.bankinator import Bankinator
+from app.analyze.sentiment_analyzer import Bankinator
 
 
-@app.route("/")
+@app.route("/act")
 def predict_mark():
     return render_template("predict_mark.html")
 
