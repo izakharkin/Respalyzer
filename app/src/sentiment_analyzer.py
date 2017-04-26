@@ -4,7 +4,7 @@ from sklearn.externals import joblib
 
 import os
 import _pickle
-# __file__ refers to the file settings.py
+
 APP_SRC_PATH = os.path.dirname(os.path.abspath(__file__))
 
 CLASSIFIERS_PATH = os.path.join(APP_SRC_PATH, 'classifiers')
@@ -14,6 +14,7 @@ BEST_CLF_PATH = os.path.join(CLASSIFIERS_PATH, 'BestClassifier.pkl')
 BEST_VECT_PATH = os.path.join(VECTORIZERS_PATH, 'BestVectorizer.pkl')
 VOCAB_PATH = os.path.join(VECTORIZERS_PATH, 'best_vectorizer_vocabulary.pkl')
 
+
 class SentimentAnalyzer():
     def __init__(self):
         # joblib did not work, I had to use _pickle
@@ -22,7 +23,7 @@ class SentimentAnalyzer():
         with open(BEST_VECT_PATH, "rb") as vect_file:
             self.vectorizer = _pickle.load(vect_file)
         with open(VOCAB_PATH, "rb") as vocab_file:
-             self.vectorizer.vocabulary_ = _pickle.load(vocab_file)
+            self.vectorizer.vocabulary_ = _pickle.load(vocab_file)
         self.classes_dict = {0: "awful", 1: "very negative", 2: "negative",
                              3: "satisfied", 4: "good", 5: "great", -1: "prediction error"}
         self.can_predict_proba = 'predict_proba' in dir(self.model)

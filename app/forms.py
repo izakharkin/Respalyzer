@@ -1,16 +1,11 @@
-from app import app
-from flask import request, render_template
-from app.src.sentiment_analyzer import SentimentAnalyzer
+from flask_wtf import Form
+
+from wtforms.fields import StringField
+from wtforms.widgets import TextArea
+from wtforms.validators import DataRequired
 
 
-@app.route("/act")
-def predict_mark():
-    return render_template("predict_mark.html")
-
-
-@app.route("/predict", methods=['GET'])
-def predictor():
-    respalizer = SentimentAnalyzer()
-    return respalizer.get_prediction_message(request.args.get('text', ''))
-
-# <dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
+class TextInputForm(Form):
+    textarea = StringField(u'Enter your sentiment',
+                           widget=TextArea(),
+                           validators=[DataRequired()])
