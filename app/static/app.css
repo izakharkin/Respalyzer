@@ -1,12 +1,25 @@
-.jumbotron {
-    margin-top: 1em;
-}
+/*html {*/
+    /*background: url(background.jpg) no-repeat;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+
 
 .input_form {
+    text-align: center;
+}
+
+.prediction_message {
     text-align: center;
 }
 
 .app_h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 100px;
+}
+
+.navbar-text {
+    text-align: right;
 }
