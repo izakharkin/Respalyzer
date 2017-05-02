@@ -7,5 +7,4 @@ Supported topics:
 - (TODO) Films
 - (TODO) Tweets
 
-WORK IN PROGRESS
-
+* This project originally was a homework for <a href="https://github.com/vkantor/MIPT_Data_Mining_In_Action_2016">"Data Mining in Action 2016" MIPT course</a>
