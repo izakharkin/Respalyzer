@@ -35,7 +35,9 @@ def sentiment_form():
 
 @frontend.route("/predict", methods=['GET'])
 def predict():
-    respalizer = SentimentAnalyzer()
-    prediction_message = respalizer.get_prediction_message(request.args.get('textarea', ''))
+    sentiment_text = request.args.get('textarea', '')
+    respalyzer = SentimentAnalyzer()
+    prediction_message = respalyzer.get_prediction_message(sentiment_text)
     return render_template("prediction.html", form=TextInputForm(),
+                           sentiment_text=sentiment_text,
                            prediction_message=prediction_message)

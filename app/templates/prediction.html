@@ -8,9 +8,9 @@
         <div class="col-md-12 input_form">
             <form action="predict" method="GET">
                 <label>
-                    {{ form.textarea(cols="130", rows="20") }}
+                    {{ form.textarea(cols="130", rows="20", placeholder=sentiment_text) }}
                     {# or we can use this: {{ wtf.quick_form(form, novalidate=True) }} #}
-                    <input type="submit" value="Show the mark!">
+                    <input type="submit" value="Show the mark!" class="btn btn-default">
                 </label>
             </form>
         </div>
