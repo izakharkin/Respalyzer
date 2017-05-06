@@ -2,6 +2,9 @@
 Russian sentiments analyzer.  
 Predicts tonality of response - mark from 1 to 5.
 
+<img src="screenshots/home.png">
+<img src="screenshots/sentiment_example.png">
+
 Supported topics:
 - Bank services responses
 - (TODO) Films
