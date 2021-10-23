@@ -13,12 +13,19 @@ Supported topics:
 (This project originally was a homework for <a href="https://github.com/vkantor/MIPT_Data_Mining_In_Action_2016">"Data Mining in Action 2016" MIPT course</a>)
 
 # How to run it?
-At first, download this repo, for example, exucute this in a shell:  
+
+1. Download this repo:  
 
 <code>git clone https://github.com/izaharkin/Respalyzer</code>
 
-After unpacking, cd to /Respalizer folder and run the script:  
+2. Install the dependencies:
 
-<code>python3 run.py</code>
+<code>pip install -r requirements.txt</code>
 
-The application will be available on 127.0.0.1:5000 in any browser.
+**Note:** It is highly recommended to use virtual envirenment, e.g. `conda env` or `virtualenv`
+
+3. Go to `Respalizer/` folder and run the script:  
+
+<code>python run.py</code>
+
+The application will be available on `127.0.0.1:5000` in any browser.
